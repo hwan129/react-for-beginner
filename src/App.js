@@ -1,11 +1,28 @@
-// movies -------------------------------------------------------------
-
+// movies Detail 완성하기-------------------------------------------------------------
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
+// BrowerRouter = URL에 이름이 그대로 나타난다. HashRouter = URL에 # 다음에 이름이 붙는다.
 function App() {
-  return null;
+  // router를 render한다
+  //router는 URl을 보고있는 component
+  return (
+    <Router>
+      {" "}
+      {/* URL 바라보기. 바뀌면 알맞은 페이지 보여줌. 유저 위치에 따라. */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<Detail />} />
+        {/*다이나믹 URL = URL에 변수를 넣을 수 있다. ex) :id*/}
+        <Route path="/hello" element={<h1>Hello</h1>} />
+        {/* URL에 따라 나오는 페이지 */}
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
-//coins------------------------------------------------------------
+//coins- 원화를 입력하면 코인으로 변경-----------------------------------------------------------
 // import { useState, useEffect } from "react";
 
 // function App() {
