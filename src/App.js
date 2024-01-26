@@ -11,7 +11,7 @@ function App() {
       {" "}
       {/* URL 바라보기. 바뀌면 알맞은 페이지 보여줌. 유저 위치에 따라. */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
         <Route path="/movie/:id" element={<Detail />} />
         {/*다이나믹 URL = URL에 변수를 넣을 수 있다. ex) :id*/}
         <Route path="/hello" element={<h1>Hello</h1>} />
