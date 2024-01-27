@@ -1,0 +1,22 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.cover_img {
+  box-shadow: 0 0 15px black;
+  border: 15px;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.movie {
+  margin: 10px;
+}

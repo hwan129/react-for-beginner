@@ -9,7 +9,7 @@ function Home() {
     const json = await (
       await fetch(
         // then과 같은 것
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=9.0&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?minimum_rating=9.0&sort_by=rating`
       )
     ).json();
     setMovies(json.data.movies);
