@@ -2,6 +2,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+import Test from "./Test";
+
 // BrowerRouter = URL에 이름이 그대로 나타난다. HashRouter = URL에 # 다음에 이름이 붙는다.
 function App() {
   // router를 render한다
@@ -14,7 +16,7 @@ function App() {
         <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
         <Route path="/movie/:id" element={<Detail />} />
         {/*다이나믹 URL = URL에 변수를 넣을 수 있다. ex) :id*/}
-        <Route path="/hello" element={<h1>Hello</h1>} />
+        <Route path={process.env.PUBLIC_URL + "/test"} element={<Test />} />
         {/* URL에 따라 나오는 페이지 */}
       </Routes>
     </Router>
