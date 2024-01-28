@@ -40,10 +40,18 @@ li {
 
 .movie h2 {
   padding-left: 10px;
+  color: gray;
 }
 .rating h1 {
   color: red;
 }
 .back {
   text-align: right;
+}
+
+.genres li {
+  font-weight: bold;
+}
+.summary {
+  font-weight: bold;
 }
