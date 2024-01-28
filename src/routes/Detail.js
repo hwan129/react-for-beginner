@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; //???
+import { useNavigate, useParams } from "react-router-dom"; //???
 import styles from "./Detail.module.css";
 
 function Detail() {
@@ -17,6 +17,12 @@ function Detail() {
   useEffect(() => {
     getMovie();
   }, []);
+
+  const navigate = useNavigate();
+
+  const navigateToBack = () => {
+    navigate("/react-for-beginners");
+  };
   return (
     <div className={styles.container}>
       {loading ? (
@@ -31,16 +37,33 @@ function Detail() {
             src={movie.large_cover_image}
           />
           <div className={styles.movie}>
-            <div>Title{movie.title_long}</div>
-            <div>Summary{movie.summary}</div>
             <div>
-              Genres
+              <h2>Title</h2>
+              <h1>{movie.title_long}</h1>
+            </div>
+            <div>
+              <h2>Summary</h2>
+              {movie.description_full === ""
+                ? "직접 보세요!"
+                : movie.description_full}
+            </div>
+            <h2>Genres</h2>
+            <div className={styles.genres}>
               {movie.genres.map((g) => (
                 <li key={g}>{g}</li>
               ))}
             </div>
-            <div>Rating{movie.rating}</div>
-            <div>Runtime{movie.runtime}</div>
+            <div className={styles.rating}>
+              <h2>Rating</h2>
+              <h1>{movie.rating}</h1>
+            </div>
+            <div className={styles.runtime}>
+              <h2>Runtime</h2>
+              <h1>{movie.runtime} minutes</h1>
+            </div>
+            <div className={styles.back}>
+              <button onClick={navigateToBack}>뒤로가기</button>
+            </div>
           </div>
         </div>
       )}
