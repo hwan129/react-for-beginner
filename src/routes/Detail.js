@@ -31,16 +31,16 @@ function Detail() {
             src={movie.large_cover_image}
           />
           <div className={styles.movie}>
-            <div>title : {movie.title_long}</div>
-            <div>Summary : {movie.summary}</div>
+            <div>Title{movie.title_long}</div>
+            <div>Summary{movie.summary}</div>
             <div>
-              Genres :
+              Genres
               {movie.genres.map((g) => (
                 <li key={g}>{g}</li>
               ))}
             </div>
-            <div>Rating : {movie.rating}</div>
-            <div>Runtime : {movie.runtime}</div>
+            <div>Rating{movie.rating}</div>
+            <div>Runtime{movie.runtime}</div>
           </div>
         </div>
       )}
