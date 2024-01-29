@@ -17,6 +17,8 @@
   border: 15px;
   border-radius: 20px;
   margin: 15px;
+  height: auto;
+  object-fit: cover;
 }
 
 .movie {
@@ -49,9 +51,17 @@ li {
   text-align: right;
 }
 
+.back button {
+  padding: 10px;
+}
+
 .genres li {
   font-weight: bold;
 }
 .summary {
   font-weight: bold;
+}
+
+.load {
+  font-size: 50px;
 }
