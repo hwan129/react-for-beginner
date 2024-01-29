@@ -45,7 +45,7 @@ function Detail() {
               <h2>Summary</h2>
               <div className={styles.summary}>
                 {movie.description_full === ""
-                  ? "직접 보세요!"
+                  ? "직접 보세요 ! "
                   : movie.description_full}
               </div>
             </div>
